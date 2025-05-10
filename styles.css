@@ -1,0 +1,165 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    transition: background 0.3s ease, color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body.dark-mode {
+    background: #1a1a1a;
+    color: #fff;
+  }
+  
+  body.light-mode {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  input,
+  textarea,
+  select,
+  button {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #0c0;
+  }
+  
+  h5 {
+    text-align: right;
+    font-size: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+  }
+  
+  textarea,
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  button:active {
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+  
+  .output {
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .preview {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .count-display {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .copy-btn {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .theme-toggle {
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    background: #0c0;
+    color: white;
+  }
+  
+  .btn:hover {
+    background: #090;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Light Mode Overrides */
+  body.light-mode .output,
+  body.light-mode .preview {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+  
+  body.light-mode .count-display {
+    color: #555;
+  }
+  
+  body.light-mode button,
+  body.light-mode .btn,
+  body.light-mode .copy-btn {
+    background: #0c0;
+    color: #fff;
+  }
+  
+  body.light-mode button:hover,
+  body.light-mode .btn:hover,
+  body.light-mode .copy-btn:hover {
+    background: #090;
+  }
+  
+  /* Dark Mode Defaults */
+  body.dark-mode .output,
+  body.dark-mode .preview {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  body.dark-mode .count-display {
+    color: #ccc;
+  }
+  
+  body.dark-mode .copy-btn {
+    background: #0c0;
+    color: #fff;
+  }
+  
+  body.dark-mode .copy-btn:hover {
+    background: #090;
+  }
+  

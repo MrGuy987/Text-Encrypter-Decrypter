@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Encryptor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><br><br><br><br>
+  <h1>Text Encryptor / Decryptor</h1>
+
+  <label for="mode">Cipher Type:</label>
+  <select id="mode" onchange="updateInputs()">
+    <option value="vigenere">Vigenère</option>
+    <option value="caesar">Caesar</option>
+  </select>
+
+  <label for="text">Text:</label>
+  <textarea id="text" rows="4" placeholder="Enter your message..."></textarea>
+  <div class="count-display">Character Count: <span id="char-count">0</span></div>
+
+  <div id="vigenere-input">
+    <label for="keyword">Keyword (Vigenère):</label>
+    <input id="keyword" type="text" placeholder="Enter the keyword..." />
+    <button onclick="generateVigenereKey()" class="btn">Generate Random Key</button>
+
+      <button onclick="encrypt()" class="btn">Encrypt</button>
+      <button onclick="decrypt()" class="btn">Decrypt</button>
+
+  </div>
+
+  <div id="caesar-input" class="hidden">
+    <label for="shift">Shift (Caesar):</label>
+    <input id="shift" type="number" value="5" />
+    <button onclick="generateCaesarShift()" class="btn">Generate Random Shift</button>
+
+      <button onclick="encrypt()" class="btn">Encrypt</button>
+      <button onclick="decrypt()" class="btn">Decrypt</button>
+
+  </div>
+
+  <div id="preview" class="preview hidden">Preview: <span id="preview-text">No message yet...</span></div>
+
+  <div class="output" id="result">Output will appear here...</div>
+
+  <button class="copy-btn" id="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+
+  <div class="theme-toggle" onclick="toggleTheme()"><button class="btn">Change Light/Dark Mode</button></div>
+  
+  <div><h5>Small Print:<br>Only use this without going into fullscreen.</h5></div>
+  <script src="script.js"></script>
+</body>
+</html>
